@@ -19,10 +19,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url('https://source.unsplash.com/random/1920x1080/?robotics,automation') no-repeat center center fixed;
-            background-size: cover;
-            filter: blur(3px);
+            background: linear-gradient(135deg, #BFFF00, #1E90FF);
             z-index: -1;
         }
         .content {
@@ -36,18 +33,18 @@
         h1 {
             font-size: 4em;
             margin-bottom: 0.2em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         p {
             font-size: 1.5em;
             margin-top: 0;
             margin-bottom: 1.5em;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
         .btn {
-            background-color: #4CAF50;
+            background-color: rgba(255, 255, 255, 0.2);
             color: white;
-            border: none;
+            border: 2px solid white;
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
@@ -56,22 +53,13 @@
             margin: 4px 2px;
             cursor: pointer;
             transition: all 0.3s ease;
-            border-radius: 5px;
+            border-radius: 50px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .btn:hover {
-            background-color: #45a049;
+            background-color: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
             box-shadow: 0 6px 8px rgba(0,0,0,0.15);
-        }
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 0;
         }
         .circuit-lines {
             position: fixed;
@@ -80,18 +68,16 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle, #ffffff 1px, transparent 1px),
-                linear-gradient(to right, #ffffff 1px, transparent 1px),
-                linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+                radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
             background-size: 50px 50px, 25px 25px, 25px 25px;
-            opacity: 0.1;
             z-index: -1;
         }
     </style>
 </head>
 <body>
     <div class="background"></div>
-    <div class="overlay"></div>
     <div class="circuit-lines"></div>
     <div class="content">
         <h1>Natali Vilatuña</h1>
