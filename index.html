@@ -4,96 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natali Vilatuña - Ingeniera en Mecatrónica</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body, html {
             height: 100%;
             margin: 0;
             font-family: 'Roboto', sans-serif;
             color: #ffffff;
-            overflow: hidden;
-        }
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url('https://source.unsplash.com/random/1920x1080/?robotics,automation') no-repeat center center fixed;
-            background-size: cover;
-            filter: blur(3px);
-            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
         }
         .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             text-align: center;
-            z-index: 1;
+        }
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 120px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         h1 {
-            font-size: 4em;
-            margin-bottom: 0.2em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-size: 48px;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         p {
-            font-size: 1.5em;
-            margin-top: 0;
-            margin-bottom: 1.5em;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            font-size: 24px;
+            margin: 10px 0 30px;
         }
         .btn {
-            background-color: #4CAF50;
+            background-color: #8BC34A;
             color: white;
             border: none;
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
+            font-size: 18px;
             margin: 4px 2px;
             cursor: pointer;
             transition: all 0.3s ease;
-            border-radius: 5px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .btn:hover {
-            background-color: #45a049;
+            background-color: #689F38;
             transform: translateY(-2px);
             box-shadow: 0 6px 8px rgba(0,0,0,0.15);
-        }
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 0;
-        }
-        .circuit-lines {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle, #ffffff 1px, transparent 1px),
-                linear-gradient(to right, #ffffff 1px, transparent 1px),
-                linear-gradient(to bottom, #ffffff 1px, transparent 1px);
-            background-size: 50px 50px, 25px 25px, 25px 25px;
-            opacity: 0.1;
-            z-index: -1;
         }
     </style>
 </head>
 <body>
-    <div class="background"></div>
-    <div class="overlay"></div>
-    <div class="circuit-lines"></div>
     <div class="content">
+        <div class="logo">N</div>
         <h1>Natali Vilatuña</h1>
         <p>Ingeniera en Mecatrónica</p>
         <a href="#" class="btn">Conoce más sobre mí</a>
