@@ -1,138 +1,86 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natali Vilatuña - Ingeniera en Mecatrónica</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            color: white;
-            overflow: hidden;
-        }
-        body {
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-        .logo {
-            font-size: 72px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 36px;
-            margin: 10px 0;
-            letter-spacing: 2px;
-        }
-        p {
-            font-size: 18px;
-            margin: 10px 0 30px;
-            font-weight: 300;
-        }
-        .btn {
-            background-color: #8BC34A;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 50px;
-            transition: background-color 0.3s;
-            text-transform: uppercase;
-        }
-        .btn:hover {
-            background-color: #9CCC65;
-        }
-        .gear {
-            position: absolute;
-            opacity: 0.2;
-        }
-        .gear-1 {
-            top: 10%;
-            left: 10%;
-            width: 100px;
-            height: 100px;
-            animation: rotate 20s linear infinite;
-        }
-        .gear-2 {
-            bottom: 10%;
-            right: 10%;
-            width: 150px;
-            height: 150px;
-            animation: rotate 25s linear infinite reverse;
-        }
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .robot-arm {
-            position: absolute;
-            bottom: 0;
-            right: 10%;
-            width: 200px;
-            height: 300px;
-        }
-        .arm-base {
-            animation: move-base 4s ease-in-out infinite;
-        }
-        .arm-middle {
-            animation: move-middle 3s ease-in-out infinite;
-        }
-        .arm-end {
-            animation: move-end 2s ease-in-out infinite;
-        }
-        @keyframes move-base {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(-5deg); }
-        }
-        @keyframes move-middle {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(15deg); }
-        }
-        @keyframes move-end {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(-20deg); }
-        }
-    </style>
-</head>
-<body>
-    <svg class="gear gear-1" viewBox="0 0 100 100">
-        <path fill="#fff" d="M97.6,55.7l-4.4-0.7c-0.4-1.5-1-3-1.7-4.5l3.2-3c1.5-1.4,1.6-3.8,0.2-5.3l-4.4-4.7c-1.4-1.5-3.8-1.6-5.3-0.2 l-3.2,3c-1.4-0.8-2.9-1.5-4.5-1.9l-0.7-4.4c-0.3-2.1-2.1-3.6-4.2-3.3l-6.4,0.9c-2.1,0.3-3.6,2.1-3.3,4.2l0.7,4.4 c-1.5,0.4-3,1-4.5,1.7l-3-3.2c-1.4-1.5-3.8-1.6-5.3-0.2l-4.7,4.4c-1.5,1.4-1.6,3.8-0.2,5.3l3,3.2c-0.8,1.4-1.5,2.9-1.9,4.5l-4.4,0.7 c-2.1,0.3-3.6,2.1-3.3,4.2l0.9,6.4c0.3,2.1,2.1,3.6,4.2,3.3l4.4-0.7c0.4,1.5,1,3,1.7,4.5l-3.2,3c-1.5,1.4-1.6,3.8-0.2,5.3l4.4,4.7 c1.4,1.5,3.8,1.6,5.3,0.2l3.2-3c1.4,0.8,2.9,1.5,4.5,1.9l0.7,4.4c0.3,2.1,2.1,3.6,4.2,3.3l6.4-0.9c2.1-0.3,3.6-2.1,3.3-4.2l-0.7-4.4 c1.5-0.4,3-1,4.5-1.7l3,3.2c1.4,1.5,3.8,1.6,5.3,0.2l4.7-4.4c1.5-1.4,1.6-3.8,0.2-5.3l-3-3.2c0.8-1.4,1.5-2.9,1.9-4.5l4.4-0.7 c2.1-0.3,3.6-2.1,3.3-4.2l-0.9-6.4C101.5,56.9,99.7,55.4,97.6,55.7z M50,65c-8.3,0-15-6.7-15-15c0-8.3,6.7-15,15-15s15,6.7,15,15 C65,58.3,58.3,65,50,65z"/>
-    </svg>
-    <svg class="gear gear-2" viewBox="0 0 100 100">
-        <path fill="#fff" d="M97.6,55.7l-4.4-0.7c-0.4-1.5-1-3-1.7-4.5l3.2-3c1.5-1.4,1.6-3.8,0.2-5.3l-4.4-4.7c-1.4-1.5-3.8-1.6-5.3-0.2 l-3.2,3c-1.4-0.8-2.9-1.5-4.5-1.9l-0.7-4.4c-0.3-2.1-2.1-3.6-4.2-3.3l-6.4,0.9c-2.1,0.3-3.6,2.1-3.3,4.2l0.7,4.4 c-1.5,0.4-3,1-4.5,1.7l-3-3.2c-1.4-1.5-3.8-1.6-5.3-0.2l-4.7,4.4c-1.5,1.4-1.6,3.8-0.2,5.3l3,3.2c-0.8,1.4-1.5,2.9-1.9,4.5l-4.4,0.7 c-2.1,0.3-3.6,2.1-3.3,4.2l0.9,6.4c0.3,2.1,2.1,3.6,4.2,3.3l4.4-0.7c0.4,1.5,1,3,1.7,4.5l-3.2,3c-1.5,1.4-1.6,3.8-0.2,5.3l4.4,4.7 c1.4,1.5,3.8,1.6,5.3,0.2l3.2-3c1.4,0.8,2.9,1.5,4.5,1.9l0.7,4.4c0.3,2.1,2.1,3.6,4.2,3.3l6.4-0.9c2.1-0.3,3.6-2.1,3.3-4.2l-0.7-4.4 c1.5-0.4,3-1,4.5-1.7l3,3.2c1.4,1.5,3.8,1.6,5.3,0.2l4.7-4.4c1.5-1.4,1.6-3.8,0.2-5.3l-3-3.2c0.8-1.4,1.5-2.9,1.9-4.5l4.4-0.7 c2.1-0.3,3.6-2.1,3.3-4.2l-0.9-6.4C101.5,56.9,99.7,55.4,97.6,55.7z M50,65c-8.3,0-15-6.7-15-15c0-8.3,6.7-15,15-15s15,6.7,15,15 C65,58.3,58.3,65,50,65z"/>
-    </svg>
-    <svg class="robot-arm" viewBox="0 0 200 300">
-        <g class="arm-base" transform-origin="100 280">
-            <rect x="90" y="200" width="20" height="100" fill="#555" />
-            <circle cx="100" cy="280" r="20" fill="#777" />
-        </g>
-        <g class="arm-middle" transform-origin="100 200">
-            <rect x="95" y="100" width="10" height="100" fill="#666" />
-            <circle cx="100" cy="200" r="15" fill="#888" />
-        </g>
-        <g class="arm-end" transform-origin="100 100">
-            <rect x="97" y="50" width="6" height="50" fill="#777" />
-            <path d="M85 50 L100 30 L115 50 Z" fill="#999" />
-            <rect x="90" y="50" width="20" height="10" fill="#aaa" />
-        </g>
-    </svg>
-    <div class="container">
-        <div class="logo">N</div>
-        <h1>NATALI VILATUÑA</h1>
-        <p>Ingeniera en Mecatrónica</p>
-        <a href="#" class="btn">CONOCE MÁS SOBRE MÍ</a>
-    </div>
-</body>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--==================== UNICONS ====================-->
+        
+        
+        <!--==================== SWIPER CSS ====================-->
+        <link rel="stylesheet" href="">
+        
+        <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="">
+
+        <title>Responsive Portfolio Website</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                
+            </section>
+
+            <!--==================== SKILLS ====================-->
+            <section class="skills section" id="skills">
+
+            </section>
+
+            <!--==================== QUALIFICATION ====================-->
+            <section class="qualification section">
+
+            </section>
+
+            <!--==================== SERVICES ====================-->
+            <section class="services section" id="services">
+                
+            </section>
+
+            <!--==================== PORTFOLIO ====================-->
+            <section class="portfolio section" id="portfolio">
+                
+            </section>
+
+            <!--==================== PROJECT IN MIND ====================-->
+            <section class="project section">
+
+            </section>
+
+            <!--==================== TESTIMONIAL ====================-->
+            <section class="testimonial section">
+                
+            </section>
+
+            <!--==================== CONTACT ME ====================-->
+            <section class="contact section" id="contact">
+
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+         
+        </footer>
+        
+        <!--==================== SCROLL TOP ====================-->
+        
+
+        <!--==================== SWIPER JS ====================-->
+        <script src=""></script>
+
+        <!--==================== MAIN JS ====================-->
+        <script src=""></script>
+    </body>
 </html>
