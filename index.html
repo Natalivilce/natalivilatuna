@@ -4,64 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natali Vilatuña - Ingeniera en Mecatrónica</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body, html {
             height: 100%;
             margin: 0;
             font-family: 'Roboto', sans-serif;
             color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            overflow: hidden;
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(191, 255, 0, 0.7), rgba(0, 191, 255, 0.7));
+            z-index: -1;
         }
         .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
-        }
-        .logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 120px;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            z-index: 1;
         }
         h1 {
-            font-size: 48px;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 4em;
+            margin-bottom: 0.2em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         p {
-            font-size: 24px;
-            margin: 10px 0 30px;
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 1.5em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         .btn {
-            background-color: #8BC34A;
+            background-color: rgba(255, 255, 255, 0.2);
             color: white;
-            border: none;
+            border: 2px solid white;
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 18px;
+            font-size: 16px;
             margin: 4px 2px;
             cursor: pointer;
             transition: all 0.3s ease;
             border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .btn:hover {
-            background-color: #689F38;
+            background-color: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
             box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        .circuit-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px, 25px 25px, 25px 25px;
+            z-index: -1;
         }
     </style>
 </head>
 <body>
+    <video autoplay muted loop class="video-background">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-computer-circuit-board-running-information-10445-large.mp4" type="video/mp4">
+        Tu navegador no soporta el tag de video.
+    </video>
+    <div class="overlay"></div>
+    <div class="circuit-lines"></div>
     <div class="content">
-        <div class="logo">N</div>
         <h1>Natali Vilatuña</h1>
         <p>Ingeniera en Mecatrónica</p>
         <a href="#" class="btn">Conoce más sobre mí</a>
