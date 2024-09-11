@@ -11,6 +11,7 @@
             margin: 0;
             font-family: 'Roboto', sans-serif;
             color: white;
+            overflow: hidden;
         }
         body {
             background: linear-gradient(135deg, #4CAF50, #2E7D32);
@@ -20,6 +21,8 @@
         }
         .container {
             text-align: center;
+            position: relative;
+            z-index: 2;
         }
         .logo {
             font-size: 72px;
@@ -51,9 +54,56 @@
         .btn:hover {
             background-color: #9CCC65;
         }
+        .gear {
+            position: absolute;
+            opacity: 0.2;
+        }
+        .gear-1 {
+            top: 10%;
+            left: 10%;
+            width: 100px;
+            height: 100px;
+            animation: rotate 10s linear infinite;
+        }
+        .gear-2 {
+            bottom: 10%;
+            right: 10%;
+            width: 150px;
+            height: 150px;
+            animation: rotate 15s linear infinite reverse;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .robot-arm {
+            position: absolute;
+            bottom: 0;
+            right: 20%;
+            width: 150px;
+            height: 200px;
+            animation: move-arm 3s ease-in-out infinite;
+        }
+        @keyframes move-arm {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(-15deg); }
+        }
     </style>
 </head>
 <body>
+    <svg class="gear gear-1" viewBox="0 0 100 100">
+        <path d="M50 25C37.3 25 25 37.3 25 50s12.3 25 25 25 25-12.3 25-25-12.3-25-25-25zm0 40c-8.3 0-15-6.7-15-15s6.7-15 15-15 15 6.7 15 15-6.7 15-15 15z"/>
+        <path d="M50 0v10c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/>
+    </svg>
+    <svg class="gear gear-2" viewBox="0 0 100 100">
+        <path d="M50 25C37.3 25 25 37.3 25 50s12.3 25 25 25 25-12.3 25-25-12.3-25-25-25zm0 40c-8.3 0-15-6.7-15-15s6.7-15 15-15 15 6.7 15 15-6.7 15-15 15z"/>
+        <path d="M50 0v10c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40zm0 90c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/>
+    </svg>
+    <svg class="robot-arm" viewBox="0 0 100 200">
+        <rect x="45" y="0" width="10" height="150" fill="#ddd"/>
+        <circle cx="50" cy="160" r="20" fill="#bbb"/>
+        <rect x="30" y="180" width="40" height="20" fill="#999"/>
+    </svg>
     <div class="container">
         <div class="logo">N</div>
         <h1>NATALI VILATUÑA</h1>
